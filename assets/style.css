@@ -1,0 +1,178 @@
+body {
+    background:url(img/background.png) no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(to right, #556b2f, #6b8e23);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: "Archivo Black", sans-serif;
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cartao {
+    margin: 1rem;
+    background-color: white;
+    height: 18rem;
+    flex-grow: 1;
+    flex-basis: calc(30% - 4rem);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    border-top: 5px solid #6b8e23;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cartao__conteudo {
+    text-align: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
+    border-radius: 0.5rem;
+}
+
+.cartao__conteudo h3 {
+    background: linear-gradient(to right, #8fbc8f, #556b2f);
+    text-align: center;
+    border: none;
+    padding: 1rem;
+    position: relative;
+    margin: 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+    font-size: 1.5rem;
+    color: white;
+    font-family: "Archivo Black", sans-serif;
+    text-transform: uppercase;
+}
+
+.cartao__conteudo__pergunta p {
+    color: #556b2f;
+    margin: 2rem 1rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.cartao__conteudo__resposta p {
+    color: #333;
+    margin: 2rem 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.cartao:hover .cartao__conteudo {
+    transform: rotateY(180deg);
+}
+
+.cartao__conteudo__resposta {
+    transform: rotateY(180deg);
+    background-color: white;
+}
+
+.cartao__conteudo__pergunta,
+.cartao__conteudo__resposta {
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.cartao__conteudo__pergunta {
+    background-color: #f8f8f0;
+}
+
+footer {
+    background: linear-gradient(to right, #556b2f, #6b8e23);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Efeitos agrícolas */
+.cartao::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, #d2b48c, #8fbc8f);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.cartao:hover::after {
+    opacity: 1;
+}
+
+/* Ícones de plantação */
+.cartao__conteudo__pergunta::before,
+.cartao__conteudo__resposta::before {
+    content: "🌱";
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.2;
+}
+
+.cartao__conteudo__pergunta::before {
+    top: 10px;
+    right: 10px;
+}
+
+.cartao__conteudo__resposta::before {
+    bottom: 10px;
+    left: 10px;
+}
