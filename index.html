@@ -3,52 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Archivo+Black&display=swap" rel="stylesheet">
     <title>Tecnologia Agrícola</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Tecnologia Agrícola</h1>
+        <p>Soja e Milho</p>
     </header>
     <main>
-        <div class="container">
-            <div class="card">
-                <div class="card-content">
-                    <div class="front">
+        <section id="container">
+            <article class="cartao">
+                <div class="cartao__conteudo">
+                    <div class="cartao__conteudo__frente">
                         <h3>Soja</h3>
                         <p>Glycine max</p>
                     </div>
-                    <div class="back">
+                    <div class="cartao__conteudo__verso">
                         <p>Época de plantio: Out-Dez</p>
                         <p>Espaçamento: 40-50 cm</p>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <div class="front">
+            </article>
+            <!-- Adicionados mais 2 cartões -->
+            <article class="cartao">
+                <div class="cartao__conteudo">
+                    <div class="cartao__conteudo__frente">
                         <h3>Milho</h3>
                         <p>Zea mays</p>
                     </div>
-                    <div class="back">
+                    <div class="cartao__conteudo__verso">
                         <p>Profundidade: 3-5 cm</p>
                         <p>Ciclo: 100-150 dias</p>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <div class="front">
+            </article>
+            <article class="cartao">
+                <div class="cartao__conteudo">
+                    <div class="cartao__conteudo__frente">
                         <h3>Fertilização</h3>
                     </div>
-                    <div class="back">
+                    <div class="cartao__conteudo__verso">
                         <p>NPK + Micronutrientes</p>
                         <p>Calagem: pH 6.0-6.5</p>
                     </div>
                 </div>
-            </div>
-        </div>
+            </article>
+        </section>
     </main>
+    <footer>
+        <p>Conhecimento agrícola para produtividade</p>
+    </footer>
 </body>
 </html>
