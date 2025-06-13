@@ -96,13 +96,16 @@ header p {
     line-height: 1.5;
 }
 
-.cartao:hover .cartao__conteudo {
+.cartao:active .cartao__conteudo {
     transform: rotateY(180deg);
 }
 
 .cartao__conteudo__resposta {
     transform: rotateY(180deg);
-    background-color: white;
+}
+
+.cartao__conteudo.girado {
+    transform: rotateY(180deg);
 }
 
 .cartao__conteudo__pergunta,
